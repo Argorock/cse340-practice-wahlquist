@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+
+<h1>Course Catalog</h1>
+
+<ul>
+  <% Object.values(courses).forEach(course => { %>
+    <li>
+      <a href="/catalog/<%= course.id %>">
+        <%= course.id %> — <%= course.title %>
+      </a>
+    </li>
+  <% }) %>
+</ul>
+
+<%- include('partials/footer') %>
